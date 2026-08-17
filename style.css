@@ -1,0 +1,251 @@
+/* ---------------------------------------------
+   Faith Ann Couts — academic site
+   Serif/sans pairing on system fonts (no external
+   font requests, keeps the page fast & self-contained)
+--------------------------------------------- */
+
+:root {
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --bg: #faf8f5;
+  --bg-alt: #f2ede7;
+  --text: #2a2724;
+  --text-muted: #6b655e;
+  --accent: #a35c43;
+  --border: #e2dbd1;
+
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: normal;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+h1 { font-size: 2.2rem; margin: 0 0 8px; }
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+}
+h3 {
+  font-size: 1.1rem;
+  margin: 36px 0 12px;
+  color: var(--text);
+}
+
+p { margin: 0 0 16px; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover { border-bottom-color: var(--accent); }
+
+ul { padding-left: 0; margin: 0; list-style: none; }
+
+/* ---- Header / nav ---- */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: saturate(180%) blur(6px);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.site-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--text);
+  border-bottom: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+.site-nav a:hover { color: var(--accent); }
+
+.nav-cv {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* ---- Sections ---- */
+
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-of-type { border-bottom: none; }
+.section.alt { background: var(--bg-alt); }
+
+.section-note {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+/* ---- Hero / About ---- */
+
+.hero { padding-top: 56px; }
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.hero-photo img {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.hero-text { flex: 1; min-width: 260px; }
+
+.title-line {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.about-body h2 { margin-bottom: 20px; }
+
+.meta-list {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.meta-list > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+.meta-list dt {
+  color: var(--text-muted);
+  min-width: 70px;
+  font-weight: 600;
+}
+.meta-list dd { margin: 0; }
+
+/* ---- Buttons ---- */
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+.button:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* ---- Lists ---- */
+
+.tag-list li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pub-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.97rem;
+}
+.pub-list li:first-child { padding-top: 0; }
+.pub-list li:last-child { border-bottom: none; }
+
+/* ---- Footer ---- */
+
+.site-footer {
+  padding: 32px 0 48px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+.site-footer p { margin: 0; }
+
+/* ---- Responsive ---- */
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.8rem; }
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .meta-list > div { flex-direction: column; gap: 2px; }
+  .site-nav { justify-content: center; width: 100%; }
+  .header-inner { justify-content: center; text-align: center; }
+}
