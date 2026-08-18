@@ -15,7 +15,7 @@
   --accent: #a35c43;
   --border: #e2dbd1;
 
-  --max-width: 760px;
+  --max-width: 1120px;
 }
 
 * { box-sizing: border-box; }
@@ -136,12 +136,16 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 
 .hero { padding-top: 56px; }
 
-.hero-inner {
+.hero-grid {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 48px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.hero-sidebar {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 96px;
 }
 
 .hero-photo img {
@@ -151,9 +155,14 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   object-fit: cover;
   display: block;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  margin-bottom: 24px;
 }
 
-.hero-text { flex: 1; min-width: 260px; }
+.hero-main {
+  flex: 1;
+  min-width: 0;
+  padding-top: 8px;
+}
 
 .title-line {
   color: var(--text-muted);
@@ -168,7 +177,8 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   margin-bottom: 20px;
 }
 
-.about-body h2 { margin-bottom: 20px; }
+.hero-main h2 { margin-bottom: 20px; }
+.hero-main p { max-width: 640px; }
 
 .meta-list {
   margin: 28px 0 0;
@@ -176,15 +186,16 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   border-top: 1px solid var(--border);
 }
 .meta-list > div {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
   font-size: 0.95rem;
 }
 .meta-list dt {
   color: var(--text-muted);
-  min-width: 70px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.78rem;
+  margin-bottom: 2px;
 }
 .meta-list dd { margin: 0; }
 
@@ -237,15 +248,23 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 
 /* ---- Responsive ---- */
 
+@media (max-width: 900px) {
+  .hero-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .hero-sidebar {
+    position: static;
+    flex: 1 1 auto;
+  }
+  .hero-main p { max-width: none; }
+}
+
 @media (max-width: 600px) {
   body { font-size: 16px; }
   h1 { font-size: 1.8rem; }
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .meta-list > div { flex-direction: column; gap: 2px; }
+  .hero-sidebar { text-align: center; }
+  .hero-photo img { margin-left: auto; margin-right: auto; }
   .site-nav { justify-content: center; width: 100%; }
   .header-inner { justify-content: center; text-align: center; }
 }
