@@ -236,6 +236,42 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   font-size: 0.9rem;
 }
 
+.award-highlight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 640px;
+  margin: 28px 0;
+  padding: 18px 22px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.award-highlight:hover {
+  border-color: var(--accent);
+}
+.award-highlight img {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+}
+.award-highlight-label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.award-highlight-title {
+  display: block;
+  color: var(--text);
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+
 .meta-list {
   margin: 28px 0 0;
   padding-top: 20px;
@@ -335,4 +371,5 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   .site-nav { justify-content: center; width: 100%; }
   .header-inner { justify-content: center; text-align: center; }
   .award-featured { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .award-highlight { flex-direction: column; align-items: flex-start; text-align: left; }
 }
