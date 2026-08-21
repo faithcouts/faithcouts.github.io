@@ -252,7 +252,7 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   border-color: var(--accent);
 }
 .award-highlight img {
-  width: 80px;
+  width: 140px;
   height: auto;
   flex-shrink: 0;
 }
