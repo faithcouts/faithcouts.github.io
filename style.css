@@ -132,6 +132,13 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   font-style: italic;
 }
 
+.diss-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin-bottom: 10px;
+}
+
 /* ---- Hero / About ---- */
 
 .hero { padding-top: 56px; }
