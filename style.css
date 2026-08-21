@@ -335,6 +335,20 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 .pub-list li:first-child { padding-top: 0; }
 .pub-list li:last-child { border-bottom: none; }
 
+.pres-group strong { display: block; margin-bottom: 10px; }
+.pres-venues {
+  margin-top: 4px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.pres-venues li {
+  padding: 6px 0;
+  border-bottom: none;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.pres-venues li em { color: var(--text-muted); }
+
 .award-featured {
   display: flex;
   align-items: center;
