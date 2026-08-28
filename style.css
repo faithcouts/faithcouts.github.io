@@ -8,12 +8,12 @@
   --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
-  --bg: #faf8f5;
-  --bg-alt: #f2ede7;
+  --bg: #fdfcfa;
+  --bg-alt: #f6f2ee;
   --text: #2a2724;
   --text-muted: #6b655e;
-  --accent: #a35c43;
-  --border: #e2dbd1;
+  --accent: #6b3f52;
+  --border: #e6ded4;
 
   --max-width: 1120px;
 }
@@ -203,17 +203,16 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid var(--border);
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--text);
   border-radius: 50%;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--border);
 }
-.icon-btn svg { width: 17px; height: 17px; }
+.icon-btn svg { width: 18px; height: 18px; }
 .icon-btn:hover {
   color: var(--bg);
   background: var(--accent);
@@ -297,6 +296,17 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   margin-bottom: 2px;
 }
 .meta-list dd { margin: 0; }
+
+.lab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.lab-logo {
+  height: 22px;
+  width: auto;
+  border-radius: 3px;
+}
 
 /* ---- Buttons ---- */
 
