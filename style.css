@@ -297,17 +297,6 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 }
 .meta-list dd { margin: 0; }
 
-.lab-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.lab-logo {
-  height: 22px;
-  width: auto;
-  border-radius: 3px;
-}
-
 /* ---- Buttons ---- */
 
 .button {
