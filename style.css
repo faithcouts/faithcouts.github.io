@@ -12,7 +12,7 @@
   --bg-alt: #f6f2ee;
   --text: #2a2724;
   --text-muted: #6b655e;
-  --accent: #6b3f52;
+  --accent: #2c4870;
   --border: #e6ded4;
 
   --max-width: 1120px;
@@ -114,7 +114,7 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 
 .nav-cv {
   color: var(--accent) !important;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ---- Sections ---- */
@@ -174,7 +174,7 @@ ul { padding-left: 0; margin: 0; list-style: none; }
 .identity-line {
   color: var(--accent);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin: 0 0 10px;
@@ -266,7 +266,7 @@ ul { padding-left: 0; margin: 0; list-style: none; }
   display: block;
   color: var(--accent);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
